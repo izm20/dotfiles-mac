@@ -1,17 +1,18 @@
 #!/usr/bin/env zsh
 
 # The order matters.
-zstyle ':prezto:load' pmodule \
-  'environment' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'history' \
-  'completion' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'contrib-prompt' \
-  'prompt'
+zstyle ":prezto:load" pmodule \
+  "environment" \
+  "directory" \
+  "spectrum" \
+  "utility" \
+  "history" \
+  "completion" \
+  "syntax-highlighting" \
+  "history-substring-search" \
+  "autosuggestions" \
+  "contrib-prompt" \
+  "prompt"
 
-zstyle ':prezto:*:*' color 'yes'
-zstyle ':prezto:module:prompt' theme 'spaceship'
+zstyle ":prezto:*:*" color "yes"
+zstyle ":prezto:module:prompt" theme "spaceship"
