@@ -1,0 +1,21 @@
+# Node
+npm-debug.log
+
+# Windows
+Thumbs.db
+
+# Projects
+.dev.sh
+devs.sh
+devs-table.sh
+.code
+
+# IntelliJ IDEA
+.idea
+*.iml
+*.iws
+.idea-compl
+*.sc
+
+# Mac
+.DS_Store

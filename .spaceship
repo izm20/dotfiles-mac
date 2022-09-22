@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+SPACESHIP_PROMPT_ADD_NEWLINE=false

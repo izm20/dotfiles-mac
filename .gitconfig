@@ -1,0 +1,85 @@
+[user]
+	name = Imar Abreu
+	email = abreudiazimar9620@gmail.com
+
+[fetch]
+  prune = true
+
+[pull]
+  prune = true
+	default = current
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+	ui = true
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+  autocrlf = input
+  trustctime = false
+  precomposeunicode = false
+  ignorecase = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[help]
+	autocorrect = 1
+
+[credential]
+	helper = cache
+
+[push]
+	default = current
+
+[branch]
+	autosetuprebase = always
+
+[alias]
+	co = checkout
+  cob = checkout -b
+	br = branch
+	ci = commit
+ 	cm = !sh ~/.git-scripts/git-commit.sh
+	st = status
+	ps = push
+	pl = pull
+	ra = remote add
+	a = add .
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+[diff]
+	tool = vimdiff
+  compactionHeuristic = true
+	indentHeuristic = true
+
+[merge]
+  tool = vimdiff
+  compactionHeuristic = true
+	indentHeuristic = true
+
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
