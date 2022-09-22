@@ -7,3 +7,7 @@ bash symlinks.bash
 
 vim +PluginInstall +qall
 
+source "${HOME}/.zshrc"
+
+cd $ZPREZTODIR
+git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
