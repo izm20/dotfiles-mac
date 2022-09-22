@@ -5,10 +5,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
+Plugin 'neoclide/coc.nvim' , { 'branch' : 'release' }
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xuyuanp/nerdtree-git-plugin'
@@ -16,8 +18,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'scrooloose/syntastic'
 
-Plugin 'stanangeloff/php.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,7 +57,10 @@ set lazyredraw
 set magic
 set showmatch
 set mat=2
+set number
+set rnu
 
-let g:solarized_termcolors=256
+Bundle 'sonph/onehalf', {'rtp': 'vim/'}
+colorscheme onehalflight
+let g:airline_theme='onehalflight'
 
-colorscheme solarized

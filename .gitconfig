@@ -43,7 +43,7 @@
 	ci = commit
  	cm = !sh ~/.git-scripts/git-commit.sh
 	st = status
-	ps = push
+	ps = push origin
 	pl = pull
 	ra = remote add
 	a = add .
@@ -63,13 +63,16 @@
 
 [init]
 	defaultBranch = main
+
 [interactive]
 	diffFilter = diff-so-fancy --patch
+
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+
 [color "diff"]
 	meta = 11
 	frag = magenta bold
@@ -78,6 +81,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+  
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
