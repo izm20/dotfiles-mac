@@ -61,6 +61,6 @@ set number
 set rnu
 
 Bundle 'sonph/onehalf', {'rtp': 'vim/'}
-colorscheme onehalflight
-let g:airline_theme='onehalflight'
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 
