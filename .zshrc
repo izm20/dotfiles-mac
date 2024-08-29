@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
-
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+export PATH="/opt/homebrew/bin:$PATH"
 
 [ -s "${HOME}/.spaceship" ] && \. "${HOME}/.spaceship";
 [ -s "${HOME}/.exports" ] && \. "${HOME}/.exports";
@@ -10,6 +8,19 @@
 
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
+#eval "$(github-copilot-cli alias -- "$0")"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# pnpm
+export PNPM_HOME="/Users/izm20/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# bun completions
+[ -s "/Users/izm20/.bun/_bun" ] && source "/Users/izm20/.bun/_bun"
+
+
+# fnm
+export PATH="/Users/izm20/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+PATH=~/.console-ninja/.bin:$PATH

@@ -9,7 +9,7 @@ Thumbs.db
 devs.sh
 devs-table.sh
 .code
-
+.vscode/
 # IntelliJ IDEA
 .idea
 *.iml
